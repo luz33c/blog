@@ -5,7 +5,7 @@ import image from "@astrojs/image";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
-import netlify from "@astrojs/netlify/functions";
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,5 +22,5 @@ export default defineConfig({
     }
   }), image(), sitemap()],
   output: "server",
-  adapter: netlify()
+  adapter: vercel()
 });

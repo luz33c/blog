@@ -51,6 +51,6 @@
 		}
 	},
 	"dependencies": {
-		"@astrojs/netlify": "^1.2.0"
+		"@astrojs/vercel": "^2.3.3"
 	}
 }
