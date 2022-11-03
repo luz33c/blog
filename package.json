@@ -10,7 +10,6 @@
 		"format": "prettier -w ./src ./src/**/*.astro"
 	},
 	"devDependencies": {
-		"@astrojs/image": "^0.11.0",
 		"@astrojs/mdx": "^0.11.5",
 		"@astrojs/sitemap": "^1.0.0",
 		"@astrojs/tailwind": "latest",
