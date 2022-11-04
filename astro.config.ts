@@ -4,8 +4,6 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
-import vercel from "@astrojs/vercel/static";
-
 export default defineConfig({
   markdown: {
     shikiConfig: {
@@ -18,7 +16,7 @@ export default defineConfig({
     config: {
       applyBaseStyles: false
     }
-  }), sitemap()],  // output: "server",
-  adapter: vercel()
+  }), sitemap()],
+  // output: "server",
 
 });
