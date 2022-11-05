@@ -10,24 +10,21 @@ const meta = {
 	description: "The perfect starter for your perfect blog.",
 };
 
-const MAX_POSTS = 10;
+const MAX_POSTS = 9;
 const allPosts = await Astro.glob<Post>("./posts/*.mdx");
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={meta}>
 	<section>
-		<h1 class="mb-6 title">Hello World!</h1>
+		<h1 class="mb-6 title">欢迎你</h1>
 		<p class="mb-4">
-			Hi, I’m a theme for Astro, an example of how you can use this starter to
-			create a personal blog. If you want to know more about how you can
-			customise me, add more posts, and make it your own, click on one of the
-			social links which will take you to my repo.
+			我是一名web应用的全栈开发者,我的博客会写作web前后端开发的内容以及区块链相关的内容，也会关注些新事物如zig。
 		</p>
 		<SocialList />
 	</section>
 	<section aria-label="Blog post list" class="mt-16">
-		<h2 class="mb-4 text-xl title">Posts</h2>
+		<h2 class="mb-4 text-xl title">最新blog：</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			{
 				allPostsByDate.map((p) => (
@@ -39,7 +36,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</ul>
 	</section>
 	<section class="mt-16">
-		<h2 class="mb-4 text-xl title">Technologies</h2>
+		<h2 class="mb-4 text-xl title">最近关注的技术栈：</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			<li>
 				<a
@@ -49,42 +46,33 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					class="inline-block cactus-link"
 					>Astro
 				</a>:
-				<p class="inline-block sm:mt-2">Build fast websites, faster.</p>
+				<p class="inline-block sm:mt-2">web同构框架，采用island架构，与nextjs，remix是竞品。</p>
 			</li>
 			<li>
 				<a
-					href="https://docs.astro.build/en/guides/integrations-guide/image/"
+					href="https://ziglang.org/"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="inline-block cactus-link"
-					>@astro/image
+					>zig
 				</a>:
 				<p class="inline-block sm:mt-2">
-					An Astro integration for optimising images in Astro projects.
+					新系统级编程语言，被uber，bunjs所用。
 				</p>
 			</li>
 			<li>
 				<a
-					href="https://tailwindcss.com"
+					href="https://turbo.build/"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="inline-block cactus-link"
-					>Tailwind CSS
+					>Turbo
 				</a>:
 				<p class="inline-block sm:mt-2">
-					Rapidly build modern websites without ever leaving your HTML.
+					采用rust实现的前端工程化工具集，含turborepo（新一代monorepo构建系统），以及turbopack（新一代webpack）。
 				</p>
 			</li>
-			<li>
-				<a
-					href="https://mdxjs.com/"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="inline-block cactus-link"
-					>MDX
-				</a>:
-				<p class="inline-block sm:mt-2">Markdown for the component era.</p>
-			</li>
+		
 		</ul>
 	</section>
 </PageLayout>
