@@ -6,8 +6,8 @@ import { sortMDByDate } from "@/util";
 import type { Post } from "@/types";
 
 const meta = {
-	title: "Astro Cactus",
-	description: "The perfect starter for your perfect blog.",
+	title: "Luz的博客",
+	description: "",
 };
 
 const MAX_POSTS = 9;
@@ -17,9 +17,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
 <PageLayout meta={meta}>
 	<section>
-		<h1 class="mb-6 title">欢迎你</h1>
+		<h1 class="mb-6 title">欢迎</h1>
 		<p class="mb-4">
-			我是一名web应用的全栈开发者,我的博客会写作web前后端开发的内容以及区块链相关的内容，也会关注些新事物如zig。
+			Deft说：“我最擅长，唯一会的只有LoL，如果我不能在我所擅长的领域，取得成绩，那我不知道人生有什么意义”，</n>这话对我亦是一样的，因为这是最擅长和花费时间最久的一件事。
+			作为一名web应用的全栈开发者,我的博客会写作web前后端开发的内容以及区块链相关的内容，也会关注些新事物如zig。
 		</p>
 		<SocialList />
 	</section>
@@ -28,7 +29,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		<ul class="space-y-4 sm:space-y-2">
 			{
 				allPostsByDate.map((p) => (
-					<li class="flex flex-wrap items-center gap-x-2 [&_q]:w-full">
+					<li class="[&_q]:w-full flex flex-wrap items-center gap-x-2">
 						<BlogPostPreview post={p} as="h2" />
 					</li>
 				))
@@ -46,7 +47,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					class="inline-block cactus-link"
 					>Astro
 				</a>:
-				<p class="inline-block sm:mt-2">web同构框架，采用island架构，与nextjs，remix是竞品。</p>
+				<p class="inline-block sm:mt-2">
+					web同构框架，采用island架构，与nextjs，remix是竞品。
+				</p>
 			</li>
 			<li>
 				<a
@@ -72,7 +75,6 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					采用rust实现的前端工程化工具集，含turborepo（新一代monorepo构建系统），以及turbopack（新一代webpack）。
 				</p>
 			</li>
-		
 		</ul>
 	</section>
 </PageLayout>
